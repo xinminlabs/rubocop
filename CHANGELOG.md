@@ -2,6 +2,41 @@
 
 ## master (unreleased)
 
+### New features
+
+* [#3666](https://github.com/bbatsov/rubocop/issues/3666): Add new `Naming/UncommunicativeBlockParamName` cop. ([@garettarrowood][])
+* [#3666](https://github.com/bbatsov/rubocop/issues/3666): Add new `Naming/UncommunicativeMethodArgName` cop. ([@garettarrowood][])
+* [#5356](https://github.com/bbatsov/rubocop/issues/5356): Add new `Lint/UnneededCopEnableDirective` cop. ([@garettarrowood][])
+* [#5248](https://github.com/bbatsov/rubocop/pull/5248): Add new `Lint/BigDecimalNew` cop. ([@koic][])
+* [#3394](https://github.com/bbatsov/rubocop/issues/3394): Add new `Style/TrailingCommmaInArrayLiteral` cop. ([@garettarrowood][])
+* [#3394](https://github.com/bbatsov/rubocop/issues/3394): Add new `Style/TrailingCommmaInHashLiteral` cop. ([@garettarrowood][])
+* [#5319](https://github.com/bbatsov/rubocop/pull/5319): Add new `Security/Open` cop. ([@mame][])
+* Add `EnforcedStyleForEmptyBrackets` configuration to `Layout/SpaceInsideReferenceBrackets`.([@garettarrowood][])
+* [#5358](https://github.com/bbatsov/rubocop/pull/5358):  `--no-auto-gen-timestamp` CLI option suppresses the inclusion of the date and time it was generated in auto-generated config. ([@dominicsayers][])
+
+### Bug fixes
+
+* [#5343](https://github.com/bbatsov/rubocop/issues/5343): Fix offense detection in `Style/TrailingMethodEndStatement`. ([@garettarrowood][])
+* [#5334](https://github.com/bbatsov/rubocop/issues/5334): Fix semicolon removal for `Style/TrailingBodyOnMethodDefinition` autocorrection. ([@garettarrowood][])
+* [#5350](https://github.com/bbatsov/rubocop/issues/5350): Fix `Metric/LineLength` false offenses for URLs in double quotes. ([@garettarrowood][])
+* [#5333](https://github.com/bbatsov/rubocop/issues/5333): Fix `Layout/EmptyLinesAroundArguments` false positives for inline access modifiers. ([@garettarrowood][])
+* [#5339](https://github.com/bbatsov/rubocop/issues/5339): Fix `Layout/EmptyLinesAroundArguments` false positives for multiline heredoc arguments. ([@garettarrowood][])
+* [#5383](https://github.com/bbatsov/rubocop/issues/5383): Fix `Rails/Presence` false detection of receiver for locally defined `blank?` & `present?` methods. ([@garettarrowood][])
+* [#5314](https://github.com/bbatsov/rubocop/issues/5314): Fix false positives for `Lint/NestedPercentLiteral` when percent characters are nested. ([@asherkach][])
+* [#5357](https://github.com/bbatsov/rubocop/issues/5357): Fix `Lint/InterpolationCheck` false positives on escaped interpolations. ([@pocke][])
+* [#5409](https://github.com/bbatsov/rubocop/issues/5409): Fix multiline indent for `Style/SymbolArray` and `Style/WordArray` autocorrect. ([@flyerhzm][])
+
+### Changes
+
+* [#3394](https://github.com/bbatsov/rubocop/issues/3394): Remove `Style/TrailingCommmaInLiteral` in favor of two new cops. ([@garettarrowood][])
+* Rename `Lint/UnneededDisable` to `Lint/UnneededCopDisableDirective`. ([@garettarrowood][])
+* [#5365](https://github.com/bbatsov/rubocop/pull/5365): Add `*.gemfile` to Bundler cop target. ([@sue445][])
+* [#4477](https://github.com/bbatsov/rubocop/issues/4477): Warn when user configuration overrides other user configuration. ([@jonas054][])
+* [#5240](https://github.com/bbatsov/rubocop/pull/5240): Make `Style/StringHashKeys` to accepts environment variables. ([@pocke][])
+* [#5395](https://github.com/bbatsov/rubocop/pull/5395): Always exit 2 when specified configuration file does not exist. ([@pocke][])
+* [#5402](https://github.com/bbatsov/rubocop/pull/5402): Remove undefined `ActiveSupport::TimeZone#strftime` method from defined dangerous methods of `Rails/TimeZone` cop. ([@koic][])
+* [#4704](https://github.com/bbatsov/rubocop/issues/4704): Move `Lint/EndAlignment`, `Lint/DefEndAlignment`, `Lint/BlockAlignment`, and `Lint/ConditionPosition` to the `Layout` namespace. ([@bquorning][])
+
 ## 0.52.1 (2017-12-27)
 
 ### Bug fixes
